@@ -1,0 +1,411 @@
+fileFormatVersion: 2
+guid: 7fdbe35e475550741a9600d793bc1dbe
+timeCreated: 1518197296
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Arc_1
+    100002: Arc_2
+    100004: Arc_3
+    100006: Arc_4
+    100008: Box01
+    100010: Box02
+    100012: Box03
+    100014: Box04
+    100016: Box05
+    100018: Box06
+    100020: Box07
+    100022: Box08
+    100024: Box09
+    100026: Box10
+    100028: Box11
+    100030: cat_1
+    100032: cat_2
+    100034: chain1
+    100036: chain2
+    100038: chain3
+    100040: //RootNode
+    100042: ChamferBox01
+    100044: ChamferBox02
+    100046: ChamferBox03
+    100048: Group01
+    100050: hook1
+    100052: hook2
+    100054: hook3
+    100056: hook4
+    100058: hook5
+    100060: hook6
+    100062: nails1
+    100064: nails2
+    100066: nails3
+    100068: nails4
+    100070: nails5
+    100072: nails6
+    100074: nails7
+    100076: obj1
+    100078: obj2
+    100080: obj3
+    100082: peg1
+    100084: peg2
+    100086: peg3
+    100088: peg4
+    100090: ring1
+    100092: ring1 1
+    100094: ring10
+    100096: ring11
+    100098: ring12
+    100100: ring13
+    100102: ring14
+    100104: ring15
+    100106: ring16
+    100108: ring17
+    100110: ring18
+    100112: ring19
+    100114: ring2
+    100116: ring2 1
+    100118: ring20
+    100120: ring21
+    100122: ring22
+    100124: ring3
+    100126: ring3 1
+    100128: ring4
+    100130: ring4 1
+    100132: ring5
+    100134: ring5 1
+    100136: ring6
+    100138: ring7
+    100140: ring8
+    100142: ring8 1
+    100144: ring9
+    400000: Arc_1
+    400002: Arc_2
+    400004: Arc_3
+    400006: Arc_4
+    400008: Box01
+    400010: Box02
+    400012: Box03
+    400014: Box04
+    400016: Box05
+    400018: Box06
+    400020: Box07
+    400022: Box08
+    400024: Box09
+    400026: Box10
+    400028: Box11
+    400030: cat_1
+    400032: cat_2
+    400034: chain1
+    400036: chain2
+    400038: chain3
+    400040: //RootNode
+    400042: ChamferBox01
+    400044: ChamferBox02
+    400046: ChamferBox03
+    400048: Group01
+    400050: hook1
+    400052: hook2
+    400054: hook3
+    400056: hook4
+    400058: hook5
+    400060: hook6
+    400062: nails1
+    400064: nails2
+    400066: nails3
+    400068: nails4
+    400070: nails5
+    400072: nails6
+    400074: nails7
+    400076: obj1
+    400078: obj2
+    400080: obj3
+    400082: peg1
+    400084: peg2
+    400086: peg3
+    400088: peg4
+    400090: ring1
+    400092: ring1 1
+    400094: ring10
+    400096: ring11
+    400098: ring12
+    400100: ring13
+    400102: ring14
+    400104: ring15
+    400106: ring16
+    400108: ring17
+    400110: ring18
+    400112: ring19
+    400114: ring2
+    400116: ring2 1
+    400118: ring20
+    400120: ring21
+    400122: ring22
+    400124: ring3
+    400126: ring3 1
+    400128: ring4
+    400130: ring4 1
+    400132: ring5
+    400134: ring5 1
+    400136: ring6
+    400138: ring7
+    400140: ring8
+    400142: ring8 1
+    400144: ring9
+    2300000: Arc_1
+    2300002: Arc_2
+    2300004: Arc_3
+    2300006: Arc_4
+    2300008: Box01
+    2300010: Box02
+    2300012: Box03
+    2300014: Box04
+    2300016: Box05
+    2300018: Box06
+    2300020: Box07
+    2300022: Box08
+    2300024: Box09
+    2300026: Box10
+    2300028: Box11
+    2300030: cat_1
+    2300032: cat_2
+    2300034: ChamferBox01
+    2300036: ChamferBox02
+    2300038: ChamferBox03
+    2300040: hook1
+    2300042: hook2
+    2300044: hook3
+    2300046: hook4
+    2300048: hook5
+    2300050: hook6
+    2300052: nails1
+    2300054: nails2
+    2300056: nails3
+    2300058: nails4
+    2300060: nails5
+    2300062: nails6
+    2300064: nails7
+    2300066: peg1
+    2300068: peg2
+    2300070: peg3
+    2300072: peg4
+    2300074: ring1 1
+    2300076: ring10
+    2300078: ring11
+    2300080: ring12
+    2300082: ring13
+    2300084: ring14
+    2300086: ring15
+    2300088: ring16
+    2300090: ring17
+    2300092: ring18
+    2300094: ring19
+    2300096: ring2 1
+    2300098: ring20
+    2300100: ring21
+    2300102: ring22
+    2300104: ring3 1
+    2300106: ring4 1
+    2300108: ring5
+    2300110: ring5 1
+    2300112: ring6
+    2300114: ring7
+    2300116: ring8
+    2300118: ring8 1
+    2300120: ring9
+    3300000: Arc_1
+    3300002: Arc_2
+    3300004: Arc_3
+    3300006: Arc_4
+    3300008: Box01
+    3300010: Box02
+    3300012: Box03
+    3300014: Box04
+    3300016: Box05
+    3300018: Box06
+    3300020: Box07
+    3300022: Box08
+    3300024: Box09
+    3300026: Box10
+    3300028: Box11
+    3300030: cat_1
+    3300032: cat_2
+    3300034: ChamferBox01
+    3300036: ChamferBox02
+    3300038: ChamferBox03
+    3300040: hook1
+    3300042: hook2
+    3300044: hook3
+    3300046: hook4
+    3300048: hook5
+    3300050: hook6
+    3300052: nails1
+    3300054: nails2
+    3300056: nails3
+    3300058: nails4
+    3300060: nails5
+    3300062: nails6
+    3300064: nails7
+    3300066: peg1
+    3300068: peg2
+    3300070: peg3
+    3300072: peg4
+    3300074: ring1 1
+    3300076: ring10
+    3300078: ring11
+    3300080: ring12
+    3300082: ring13
+    3300084: ring14
+    3300086: ring15
+    3300088: ring16
+    3300090: ring17
+    3300092: ring18
+    3300094: ring19
+    3300096: ring2 1
+    3300098: ring20
+    3300100: ring21
+    3300102: ring22
+    3300104: ring3 1
+    3300106: ring4 1
+    3300108: ring5
+    3300110: ring5 1
+    3300112: ring6
+    3300114: ring7
+    3300116: ring8
+    3300118: ring8 1
+    3300120: ring9
+    4300000: nails1
+    4300002: nails3
+    4300004: nails4
+    4300006: nails7
+    4300008: nails2
+    4300010: nails6
+    4300012: ring1
+    4300014: hook4
+    4300016: ring2
+    4300018: hook3
+    4300020: ring3
+    4300022: hook2
+    4300024: ring4
+    4300026: hook1
+    4300028: cat_1
+    4300030: hook5
+    4300032: Arc_3
+    4300034: ring5
+    4300036: ring6
+    4300038: ring7
+    4300040: ring5
+    4300042: ring11
+    4300044: ring9
+    4300046: ring10
+    4300048: ring8
+    4300050: ring8
+    4300052: hook6
+    4300054: cat_2
+    4300056: Arc_4
+    4300058: ring18
+    4300060: ring19
+    4300062: ring20
+    4300064: ring17
+    4300066: ring15
+    4300068: ring16
+    4300070: ring14
+    4300072: ring21
+    4300074: ring12
+    4300076: ring13
+    4300078: ring22
+    4300080: Box01
+    4300082: Box02
+    4300084: Box03
+    4300086: Box04
+    4300088: Box06
+    4300090: Box07
+    4300092: Box08
+    4300094: Box09
+    4300096: Box10
+    4300098: Box11
+    4300100: ChamferBox01
+    4300102: ChamferBox02
+    4300104: ChamferBox03
+    4300106: Box05
+    4300108: nails5
+    4300110: Arc_2
+    4300112: peg3
+    4300114: peg4
+    4300116: Arc_1
+    4300118: peg1
+    4300120: peg2
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
