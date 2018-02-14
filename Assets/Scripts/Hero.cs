@@ -33,7 +33,7 @@ public class Hero : MonoBehaviour {
     {
         if (Input.GetMouseButtonDown(0) && !_anim.GetCurrentAnimatorStateInfo(0).IsName("Hit 1"))
         {
-            _anim.SetLayerWeight(1, 0);
+          //  _anim.SetLayerWeight(1, 0);
             _anim.SetTrigger("Attack");
         }
     }
@@ -42,7 +42,7 @@ public class Hero : MonoBehaviour {
     {
         _anim.SetFloat("Blend", verticalMove + shitPress);
         _rb.velocity = new Vector3(transform.forward.x,0,transform.forward.z) * (3+(Input.GetKey(KeyCode.LeftShift) ? 5:0)) * verticalMove; 
-        this.transform.Rotate(0, 4f * Input.GetAxis("Horizontal"), 0);
+        this.transform.Rotate(0,3*Input.GetAxis("Horizontal"), 0);
 
         shitPress = Mathf.Clamp(shitPress, -1f, 1f);
 
@@ -61,10 +61,11 @@ public class Hero : MonoBehaviour {
             RaycastHit rh;
             if (Physics.Raycast(this.transform.position, this.transform.forward, out rh, 3))
             {
-                if (rh.collider != null && rh.transform.CompareTag("Door"))
+                if (rh.collider != null)
                 {
-                    Doors door = rh.transform.GetComponentInParent<Doors>();
-                    door.OpenOrClose((rh.transform.position - this.transform.position));
+                    OpenClose openClose = rh.transform.GetComponentInParent<OpenClose>();
+                    if(openClose!=null)
+                        openClose.OpenClose((rh.transform.position - this.transform.position));
                 }
             }
         }

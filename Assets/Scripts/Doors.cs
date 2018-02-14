@@ -1,8 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Doors : MonoBehaviour {
+public class Doors : MonoBehaviour, OpenClose {
 
     public bool isOpen;
     private Animation myAnim;
@@ -14,17 +15,18 @@ public class Doors : MonoBehaviour {
     }
 
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
         isOpen = false;
     }
 	
-	public void OpenOrClose(Vector3 doorDirection)
+    public void OpenClose(Vector3 direction)
     {
         if (!myAnim.isPlaying)
         {
             if (isOpen)
-            {       
-                if(lastClip == "Open")
+            {
+                if (lastClip == "Open")
                     myAnim.clip = myAnim.GetClip("Close");
                 else
                     myAnim.clip = myAnim.GetClip("CloseInverse");
@@ -34,8 +36,8 @@ public class Doors : MonoBehaviour {
             }
             else
             {
-                if ((doorDirection.z > 0 && transform.eulerAngles.y == 180) || 
-                    (doorDirection.x > 0 && transform.eulerAngles.y == 90))
+                if ((direction.z > 0 && transform.eulerAngles.y == 180) ||
+                    (direction.x > 0 && transform.eulerAngles.y == 90))
                 {
                     myAnim.clip = myAnim.GetClip("Open");
                     lastClip = "Open";

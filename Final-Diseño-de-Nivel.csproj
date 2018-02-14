@@ -78,10 +78,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\HitBehaviour.cs" />
-    <Compile Include="Assets\MainCamera.cs" />
+    <Compile Include="Assets\Scripts\Chest.cs" />
     <Compile Include="Assets\Scripts\Doors.cs" />
     <Compile Include="Assets\Scripts\Hero.cs" />
+    <Compile Include="Assets\Scripts\HitBehaviour.cs" />
+    <Compile Include="Assets\Scripts\MainCamera.cs" />
+    <Compile Include="Assets\Scripts\OpenClose.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Resources\Models\Enanos\Shader\Compressed MaskedShader2sided 5-4 cut out.shader" />
