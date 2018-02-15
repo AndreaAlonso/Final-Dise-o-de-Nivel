@@ -8,6 +8,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 414476}
+  - component: {fileID: 65119444952028578}
   m_Layer: 0
   m_Name: ChairSimple
   m_TagString: Untagged
@@ -25,7 +26,6 @@ GameObject:
   - component: {fileID: 449054}
   - component: {fileID: 3379956}
   - component: {fileID: 2307556}
-  - component: {fileID: 64000010548413378}
   m_Layer: 0
   m_Name: trn_ChairSimple
   m_TagString: Untagged
@@ -39,14 +39,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 105204}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: -1.364, y: 0.02103192, z: 12.1}
+  m_LocalScale: {x: 1, y: 1.3, z: 1}
   m_Children:
   - {fileID: 449054}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!4 &449054
 Transform:
   m_ObjectHideFlags: 1
@@ -110,17 +110,15 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 105204}
   m_IsPrefabParent: 1
---- !u!64 &64000010548413378
-MeshCollider:
+--- !u!65 &65119444952028578
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 177888}
+  m_GameObject: {fileID: 105204}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 3164ce28d1ad495498233730ddaa33a6, type: 3}
+  m_Size: {x: 0.8871415, y: 1.2128694, z: 0.6969271}
+  m_Center: {x: -0.368156, y: 0.5993117, z: -0.011656284}

@@ -8,6 +8,7 @@ public class Doors : MonoBehaviour, OpenClose {
     public bool isOpen;
     private Animation myAnim;
     private string lastClip;
+    public bool inverseDoor;
 
     private void Awake()
     {
@@ -39,13 +40,29 @@ public class Doors : MonoBehaviour, OpenClose {
                 if ((direction.z > 0 && transform.eulerAngles.y == 180) ||
                     (direction.x > 0 && transform.eulerAngles.y == 90))
                 {
-                    myAnim.clip = myAnim.GetClip("Open");
-                    lastClip = "Open";
+                    if (!inverseDoor)
+                    {
+                        myAnim.clip = myAnim.GetClip("Open");
+                        lastClip = "Open";
+                    }
+                    else
+                    {
+                        myAnim.clip = myAnim.GetClip("OpenInverse");
+                        lastClip = "OpenInverse";
+                    }
                 }
                 else
                 {
-                    myAnim.clip = myAnim.GetClip("OpenInverse");
-                    lastClip = "OpenInverse";
+                    if (!inverseDoor)
+                    {
+                        myAnim.clip = myAnim.GetClip("OpenInverse");
+                        lastClip = "OpenInverse";
+                    }
+                    else
+                    {
+                        myAnim.clip = myAnim.GetClip("Open");
+                        lastClip = "Open";
+                    }
                 }
 
                 myAnim.Play();

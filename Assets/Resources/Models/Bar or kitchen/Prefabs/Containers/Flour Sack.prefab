@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 495142}
   - component: {fileID: 3386634}
   - component: {fileID: 2357672}
-  - component: {fileID: 64000012048047130}
+  - component: {fileID: 65202212110307694}
   m_Layer: 0
   m_Name: trn_FlourSack
   m_TagString: Untagged
@@ -39,14 +39,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 167476}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.06490134, y: 0.017764473, z: -0.15810518, w: 0.985127}
+  m_LocalPosition: {x: -3.4609995, y: 0.491, z: 1.646}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 495142}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 7.6710005, y: 0.837, z: -18.179}
 --- !u!4 &495142
 Transform:
   m_ObjectHideFlags: 1
@@ -110,8 +110,8 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 167476}
   m_IsPrefabParent: 1
---- !u!64 &64000012048047130
-MeshCollider:
+--- !u!65 &65202212110307694
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -120,7 +120,5 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: efb478959d337d748bc90469dabf2713, type: 3}
+  m_Size: {x: 0.4825477, y: 0.6964393, z: 0.22724666}
+  m_Center: {x: 0.0013565908, y: -0.0029807978, z: -0.10426964}
