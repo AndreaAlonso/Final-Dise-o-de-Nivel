@@ -4,9 +4,33 @@ timeCreated: 18446744011573954816
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
+    100000: door_left
+    100002: frame
+    100004: rood_right
+    100006: //RootNode
+    400000: door_left
+    400002: frame
+    400004: rood_right
+    400006: //RootNode
+    2300000: door_left
+    2300002: frame
+    2300004: rood_right
+    3300000: door_left
+    3300002: frame
+    3300004: rood_right
     4300000: frame
     4300002: door_left
     4300004: rood_right
+    7400000: idle
+    7400002: out-snap-open
+    7400004: out-slam-shut
+    7400006: Open
+    7400008: Close
+    7400010: in-snap-open
+    7400012: in-slam-shut
+    7400014: OpenInverse
+    7400016: CloseInverse
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -116,7 +140,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: out-open-slowly
+      name: Open
       takeName: 
       firstFrame: 25
       lastFrame: 60
@@ -144,7 +168,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: out-close
+      name: Close
       takeName: 
       firstFrame: 80
       lastFrame: 90
@@ -228,7 +252,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: in-open-slowly
+      name: OpenInverse
       takeName: 
       firstFrame: 115
       lastFrame: 170
@@ -256,7 +280,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: in-close
+      name: CloseInverse
       takeName: 
       firstFrame: 170
       lastFrame: 180

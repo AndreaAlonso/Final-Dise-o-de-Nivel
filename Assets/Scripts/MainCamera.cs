@@ -34,7 +34,7 @@ public class MainCamera : MonoBehaviour {
     private void CameraMoveSmooth()
     {
         Vector3 targetPosition = _target.position + (_target.up * upDistance) - (_target.forward * (fowardDistance + fowardDistancePlus));
-        this.transform.position = Vector3.Lerp(transform.position, targetPosition, 0.2f);
+        this.transform.position = Vector3.Lerp(transform.position, targetPosition, 0.08f);
     }
 
     private void CameraRotationSmooth()
@@ -47,13 +47,11 @@ public class MainCamera : MonoBehaviour {
     {
         RaycastHit hit;
         if (Physics.Raycast(this.transform.position, -new Vector3(transform.forward.x, 0, transform.forward.z), out hit, 2.5f) ||
-            Physics.Raycast(this.transform.position, -new Vector3(transform.right.x, 0, transform.right.z), out hit, 2f) ||
-            Physics.Raycast(this.transform.position, new Vector3(transform.right.x, 0, transform.right.z), out hit, 2f))
+            Physics.Raycast(this.transform.position, -new Vector3(transform.right.x, 0, transform.right.z), out hit, 0.5f) ||
+            Physics.Raycast(this.transform.position, new Vector3(transform.right.x, 0, transform.right.z), out hit, 0.5f))
         {
             if (hit.collider != null && hit.distance < 1 && fowardDistancePlus > -2.6f)
-            {
-                print(hit.transform.gameObject.name);
-                
+            {               
                 fowardDistancePlus -= Time.deltaTime * 8;
             }
             else if (fowardDistancePlus < 0 && hit.distance > 2f)
@@ -66,8 +64,8 @@ public class MainCamera : MonoBehaviour {
     private void CameraDrawGizmos()
     {
         Debug.DrawRay(this.transform.position, new Vector3(transform.forward.x, 0, transform.forward.z) * -2.5f, Color.green);
-        Debug.DrawRay(this.transform.position, (new Vector3(transform.right.x, 0, transform.right.z)) * -2f, Color.red);
-        Debug.DrawRay(this.transform.position, (new Vector3(transform.right.x, 0, transform.right.z)) * 2f, Color.red);
+        Debug.DrawRay(this.transform.position, (new Vector3(transform.right.x, 0, transform.right.z)) * -0.5f, Color.red);
+        Debug.DrawRay(this.transform.position, (new Vector3(transform.right.x, 0, transform.right.z)) * 0.5f, Color.red);
     }
 }
 

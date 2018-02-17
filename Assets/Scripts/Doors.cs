@@ -9,6 +9,7 @@ public class Doors : MonoBehaviour, OpenClose {
     private Animation myAnim;
     private string lastClip;
     public bool inverseDoor;
+    public bool needKey;
 
     private void Awake()
     {
