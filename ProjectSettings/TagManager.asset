@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Door
+  - Chest
+  - Enemy1
   layers:
   - Default
   - TransparentFX
@@ -14,7 +16,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - OpenClose
   - 
   - 
   - 

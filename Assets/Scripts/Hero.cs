@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class Hero : MonoBehaviour {
 
@@ -10,21 +11,32 @@ public class Hero : MonoBehaviour {
     public float shitPress;
     public GameObject pressF;
     public GameObject needKey;
+    public int keyCant;
+    public bool canOpenDoor;
+    public float life;
+    public Slider lifeSlider;
+    public Text texto;
 
     private void Awake()
     {
         _anim = GetComponent<Animator>();
         _rb = GetComponent<Rigidbody>();
 
-        pressF = GameObject.Find("Canvas").transform.Find("KeyInformationPanel").gameObject;
-        needKey = GameObject.Find("Canvas").transform.Find("PressFPanel").gameObject;
+        pressF = GameObject.Find("Canvas").transform.Find("PressFPanel").gameObject;
+        needKey = GameObject.Find("Canvas").transform.Find("KeyInformationPanel").gameObject;
     }
     // Use this for initialization
     void Start ()
     {
         shitPress = 0;
+        life = 100f;
+        lifeSlider.maxValue = 100;
+        lifeSlider.minValue = 0;
+        lifeSlider.value = 100;
+
         _anim.SetBool("Body", true);
         Cursor.visible = false;
+        canOpenDoor = false;
     }
 	
 	// Update is called once per frame
@@ -70,34 +82,59 @@ public class Hero : MonoBehaviour {
     private void DoorInteraction()
     {
         RaycastHit rh;
-        if (Physics.Raycast(this.transform.position, this.transform.forward, out rh, 3))
+        if (Physics.Raycast(this.transform.position, this.transform.forward, out rh, 3, 1 << LayerMask.NameToLayer("OpenClose")))
         {
-            if (rh.collider != null && rh.transform.gameObject.CompareTag("Door"))
+
+            if (rh.collider)
             {
-                if (rh.transform.GetComponentInParent<Doors>().needKey)
-                    pressF.gameObject.SetActive(true);
-                else
-                    needKey.gameObject.SetActive(true);
-            }
-            else
-            {
-                if (pressF.activeSelf || needKey.activeSelf)
+                Doors door = rh.transform.GetComponentInParent<Doors>();
+                Chest chest = rh.transform.GetComponent<Chest>();
+
+                if(door != null && door.needKey)
                 {
-                    pressF.gameObject.SetActive(false);
-                    needKey.gameObject.SetActive(false);
+                 needKey.gameObject.SetActive(true);
+                 canOpenDoor = false;
+                   if (keyCant > 0)
+                   {
+                        needKey.gameObject.SetActive(false);
+                        --keyCant;
+                       door.needKey = false;
+                       canOpenDoor = true;
+                   }
                 }
+                else
+                {
+                    canOpenDoor = true;
+                    pressF.gameObject.SetActive(true);
+                }
+
+            }           
+        }
+        else
+        {
+            if (pressF.activeSelf || needKey.activeSelf)
+            {
+                pressF.gameObject.SetActive(false);
+                needKey.gameObject.SetActive(false);
             }
         }
-       
+
 
         if (Input.GetKeyDown(KeyCode.F))
         {           
-                if (rh.collider != null)
+                if (rh.collider != null && canOpenDoor)
                 {
                     OpenClose openClose = rh.transform.GetComponentInParent<OpenClose>();
                     if(openClose!=null)
                         openClose.OpenClose((rh.transform.position - this.transform.position));
                 }            
         }
+    }
+
+    public void Hit(float damage)
+    {
+        life -= damage;
+        lifeSlider.value = life;
+        texto.text = life.ToString();
     }
 }

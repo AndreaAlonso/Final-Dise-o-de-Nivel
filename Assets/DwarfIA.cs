@@ -19,6 +19,8 @@ public class DwarfIA : MonoBehaviour {
 
     public float randomMove;
     public float timeToRandomMove;
+
+    public float life;
     
 
     public void Awake()
@@ -36,6 +38,7 @@ public class DwarfIA : MonoBehaviour {
         angle = 30;
         timeToRandomMove = Random.Range(5, 25);
         _direction = 1;
+        life = 50; 
     }
 	
 	// Update is called once per frame
@@ -87,6 +90,20 @@ public class DwarfIA : MonoBehaviour {
                 randomMove = 0;
                 timeToRandomMove = Random.Range(5, 25);
             }
+        }
+    }
+
+    public void Hit(float damage)
+    {
+        life -= damage;
+
+        if(life <= 0)
+        {
+            _agent = null;
+            _anim.Stop();
+            _anim.Play("die1");
+            this.enabled = false;
+            _anim.enabled = false;
         }
     }
 }
