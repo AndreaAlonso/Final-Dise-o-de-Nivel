@@ -11,6 +11,7 @@ public class EnemyWeapon : MonoBehaviour
     {
         _anim = GetComponentInParent<Animation>();
         swordCollider = GetComponent<CapsuleCollider>();
+        swordCollider.enabled = false;
         StartCoroutine(num());
     }
 

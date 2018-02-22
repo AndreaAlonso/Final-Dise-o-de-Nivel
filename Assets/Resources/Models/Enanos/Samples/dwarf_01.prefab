@@ -2313,6 +2313,7 @@ MonoBehaviour:
   randomMove: 0
   timeToRandomMove: 0
   life: 0
+  slider: {fileID: 0}
 --- !u!114 &114467712801308836
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2496,7 +2497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce273c9444f137d408a8b5a9994a27d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  directionToHero: {x: 0, y: 0, z: 0}
+  directionCamera: {fileID: 0}
 --- !u!136 &136180543238684472
 CapsuleCollider:
   m_ObjectHideFlags: 1

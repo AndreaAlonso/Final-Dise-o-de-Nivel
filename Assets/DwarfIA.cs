@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class DwarfIA : MonoBehaviour {
 
@@ -21,6 +22,8 @@ public class DwarfIA : MonoBehaviour {
     public float timeToRandomMove;
 
     public float life;
+    public Slider slider;
+    public Text text;
     
 
     public void Awake()
@@ -38,7 +41,16 @@ public class DwarfIA : MonoBehaviour {
         angle = 30;
         timeToRandomMove = Random.Range(5, 25);
         _direction = 1;
-        life = 50; 
+        life = 50;
+        slider = GetComponentInChildren<Slider>();
+        text = GetComponentInChildren<Text>();
+        if (slider != null)
+        {
+            slider.minValue = 0;
+            slider.maxValue = life;
+            slider.value = life;
+            text.text = life.ToString();
+        }
     }
 	
 	// Update is called once per frame
@@ -96,14 +108,17 @@ public class DwarfIA : MonoBehaviour {
     public void Hit(float damage)
     {
         life -= damage;
+        slider.value = life;
+        text.text = life.ToString();
 
-        if(life <= 0)
+        if (life <= 0)
         {
+            Destroy(slider.gameObject);
             _agent = null;
             _anim.Stop();
             _anim.Play("die1");
             this.enabled = false;
-            _anim.enabled = false;
+            GetComponent<CapsuleCollider>().enabled = false;
         }
     }
 }

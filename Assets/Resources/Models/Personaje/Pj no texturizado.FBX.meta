@@ -177,6 +177,7 @@ ModelImporter:
     7400012: Jump
     7400014: Receive hit
     7400016: Death
+    7400018: Defense
     9500000: //RootNode
     13700000: Khien 1
     13700002: Object040
@@ -434,6 +435,34 @@ ModelImporter:
       takeName: Take 001
       firstFrame: 635
       lastFrame: 700
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Defense
+      takeName: Take 001
+      firstFrame: 369
+      lastFrame: 381
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

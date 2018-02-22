@@ -59,13 +59,11 @@ public class Hero : MonoBehaviour {
     private void Move(float verticalMove)
     {
         _anim.SetFloat("Blend", verticalMove + shitPress);
-        _rb.velocity = 
+        _rb.velocity =
             new Vector3
-            (
-            ((transform.forward.x * verticalMove) * (3 + (Input.GetKey(KeyCode.LeftShift) ? 3 : 0))) + (transform.right.x * (Input.GetAxis("Horizontal"))),
+            (((transform.forward.x * verticalMove) * (3 + (Input.GetKey(KeyCode.LeftShift) ? 3 : 0))),
             _rb.velocity.y,
-            ((transform.forward.z * verticalMove) * (3 + (Input.GetKey(KeyCode.LeftShift) ? 3 : 0))) + (transform.right.z * (Input.GetAxis("Horizontal")))
-            ) ; 
+            ((transform.forward.z * verticalMove) * (3 + (Input.GetKey(KeyCode.LeftShift) ? 3 : 0))));
 
         this.transform.Rotate(0,3*Input.GetAxis("Mouse X"), 0);
 

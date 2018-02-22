@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class EnemyCanvas : MonoBehaviour {
 
-    public Transform directionToHero;
+    public Transform directionCamera;
 
 	// Use this for initialization
 	void Start () {
-        directionToHero = FindObjectOfType<Hero>().transform;
+        directionCamera = FindObjectOfType<Camera>().transform;
     }
 	
 	// Update is called once per frame
 	void Update () {
-        transform.LookAt(directionToHero.position);
+        transform.LookAt(new Vector3(directionCamera.position.x, 0 , directionCamera.position.z));
 	}
 }
