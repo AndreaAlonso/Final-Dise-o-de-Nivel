@@ -16,6 +16,7 @@ public class Hero : MonoBehaviour {
     public float life;
     public Slider lifeSlider;
     public Text texto;
+    public bool activeDefense;
 
     private void Awake()
     {
@@ -49,11 +50,23 @@ public class Hero : MonoBehaviour {
 
     private void Attack()
     {
-        if (Input.GetMouseButtonDown(0) && !_anim.GetCurrentAnimatorStateInfo(0).IsName("Hit 1"))
+        if(Input.GetMouseButton(1))
+        {
+            _anim.SetBool("Defense", true);
+            activeDefense = true;         
+        }        
+        else if (Input.GetMouseButtonDown(0) && !_anim.GetCurrentAnimatorStateInfo(0).IsName("Hit 1"))
         {
           //  _anim.SetLayerWeight(1, 0);
             _anim.SetTrigger("Attack");
         }
+
+        if (Input.GetMouseButtonUp(1))
+        {
+            _anim.SetBool("Defense", false);
+            activeDefense = false;
+        }
+
     }
 
     private void Move(float verticalMove)
@@ -129,10 +142,15 @@ public class Hero : MonoBehaviour {
         }
     }
 
-    public void Hit(float damage)
+    public bool Hit(float damage)
     {
-        life -= damage;
-        lifeSlider.value = life;
-        texto.text = life.ToString();
+        if (!activeDefense)
+        {
+            life -= damage;
+            lifeSlider.value = life;
+            texto.text = life.ToString();
+        }
+
+        return activeDefense;
     }
 }

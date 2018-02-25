@@ -41,7 +41,9 @@ public class DwarfIA : MonoBehaviour {
         angle = 30;
         timeToRandomMove = Random.Range(5, 25);
         _direction = 1;
-        life = 50;
+
+        //Setear la vida en el inspector
+
         slider = GetComponentInChildren<Slider>();
         text = GetComponentInChildren<Text>();
         if (slider != null)
@@ -87,7 +89,7 @@ public class DwarfIA : MonoBehaviour {
             else
             {
                 _anim.Play("idle break");
-                this.transform.Rotate(0, ((5 + randomMove) * Time.deltaTime) * _direction, 0);
+                this.transform.Rotate(0, ((20 + randomMove) * Time.deltaTime) * _direction, 0);
             }
         }
 

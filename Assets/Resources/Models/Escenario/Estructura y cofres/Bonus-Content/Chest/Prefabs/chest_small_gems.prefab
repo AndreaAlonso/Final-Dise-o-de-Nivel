@@ -9,11 +9,11 @@ GameObject:
   m_Component:
   - component: {fileID: 400000}
   - component: {fileID: 11100000}
-  - component: {fileID: 11400000}
   - component: {fileID: 6500000}
-  m_Layer: 0
+  - component: {fileID: 114914548553903166}
+  m_Layer: 8
   m_Name: chest_small_gems
-  m_TagString: Untagged
+  m_TagString: Chest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,9 +26,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 400002}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: chest_medium1:lid
-  m_TagString: Untagged
+  m_TagString: Chest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41,9 +41,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 400004}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: chest_medium1:hinges
-  m_TagString: Untagged
+  m_TagString: Chest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56,9 +56,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 400006}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: chest_medium1:chest
-  m_TagString: Untagged
+  m_TagString: Chest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,9 +71,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 400008}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: chest_medium1:root
-  m_TagString: Untagged
+  m_TagString: Chest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87,7 +87,7 @@ GameObject:
   m_Component:
   - component: {fileID: 400010}
   - component: {fileID: 13700000}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gold
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 400012}
   - component: {fileID: 13700002}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   m_Component:
   - component: {fileID: 400014}
   - component: {fileID: 13700004}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spiderweb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 400016}
   - component: {fileID: 3300000}
   - component: {fileID: 2300000}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shadow_floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ GameObject:
   m_Component:
   - component: {fileID: 400018}
   - component: {fileID: 13700006}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: lid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,9 +168,9 @@ GameObject:
   m_Component:
   - component: {fileID: 400020}
   - component: {fileID: 13700008}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: chest_small
-  m_TagString: Untagged
+  m_TagString: Chest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -181,15 +181,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30.57058, y: 33.702484, z: 37.494728}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 1.267025, y: -4.760632, z: 4.2880135}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 400008}
   - {fileID: 400020}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!4 &400002
 Transform:
   m_ObjectHideFlags: 1
@@ -393,20 +393,9 @@ Animation:
   - {fileID: 7400004, guid: ff6c891ab974d164c93ebc47f895d0a2, type: 3}
   - {fileID: 7400006, guid: ff6c891ab974d164c93ebc47f895d0a2, type: 3}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 1
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dce34ef04d431e849aa2eb4098e2e978, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!137 &13700000
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -658,3 +647,15 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
   m_IsPrefabParent: 1
+--- !u!114 &114914548553903166
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c21d74f73a6ab624f8a0be2d05c54da5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOpen: 0
