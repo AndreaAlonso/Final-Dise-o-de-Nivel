@@ -15,7 +15,7 @@ public class GameController : MonoBehaviour {
         colliders = new Dictionary<string, Collider>();
         colliders["Spawn1"] = myColliders[0];
         colliders["Spawn2"] = myColliders[1];
-        print(myColliders[0]);
+        colliders["Final"] = myColliders[2];
     }
 	
 	// Update is called once per frame
@@ -48,6 +48,11 @@ public class GameController : MonoBehaviour {
     {
         hero.transform.position = (Vector3)heroInformation[0];
         hero.life = (float)heroInformation[1];
+    }
+
+    public void Final()
+    {
+        colliders["Final"].enabled = false;
     }
 
 }

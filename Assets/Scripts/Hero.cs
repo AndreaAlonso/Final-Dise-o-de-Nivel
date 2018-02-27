@@ -6,9 +6,11 @@ using System.Linq;
 
 public class Hero : MonoBehaviour {
 
+    private AudioSource _audio;
     private Animator _anim;
     private Rigidbody _rb;
     public float shitPress;
+    public AudioClip[] clips;
     public GameObject pressF;
     public GameObject needKey;
     public int keyCant;
@@ -28,6 +30,7 @@ public class Hero : MonoBehaviour {
 
     private void Awake()
     {
+        _audio = GetComponent<AudioSource>();
         _anim = GetComponent<Animator>();
         _rb = GetComponent<Rigidbody>();
 
@@ -55,6 +58,7 @@ public class Hero : MonoBehaviour {
     {
         if (life > 0)
         {
+
             Move(Input.GetAxis("Vertical"));
             Attack();
             DoorInteraction();
@@ -78,7 +82,10 @@ public class Hero : MonoBehaviour {
         }        
         else if (Input.GetMouseButtonDown(0) && !_anim.GetCurrentAnimatorStateInfo(0).IsName("Hit 1"))
         {
-          //  _anim.SetLayerWeight(1, 0);
+            //  _anim.SetLayerWeight(1, 0);
+            _audio.clip = clips[0];
+            if (!_audio.isPlaying)
+                _audio.Play();
             _anim.SetTrigger("Attack");
         }
 
@@ -92,6 +99,12 @@ public class Hero : MonoBehaviour {
 
     private void Move(float verticalMove)
     {
+        if (Input.GetButton("Vertical"))
+        {
+            _audio.clip = clips[1];
+            if (!_audio.isPlaying)
+                _audio.Play();
+        }
         _anim.SetFloat("Blend", verticalMove + shitPress);
         _rb.velocity =
             new Vector3
@@ -203,6 +216,8 @@ public class Hero : MonoBehaviour {
             {
                 life = 0;
                 condicion.text = "Perdiste\n Presione una tecla para continuar";
+                FindObjectOfType<Boos1>().Hit(FindObjectOfType<Boos1>().life - 100);
+                FindObjectOfType<FinalBoss>().Hit(FindObjectOfType<FinalBoss>().life - 100);
                 _anim.SetBool("Death", true);               
                 StartCoroutine(backLife());
             }
@@ -236,5 +251,12 @@ public class Hero : MonoBehaviour {
         {
             gameController.SetRespawn("Spawn2", this);
         }
+        else if (other == col[2])
+        {
+            gameController.Final();
+            condicion.text = "Has Ganado";
+            Time.timeScale = 0;
+        }
+
     }
 }

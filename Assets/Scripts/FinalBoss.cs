@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class FinalBoss : MonoBehaviour {
 
     NavMeshAgent _agent;
+    AudioSource _audio;
+    public AudioClip[] clips;
     Animation _anim;
     Transform _target;
     Vector3 _newTarget;
@@ -25,6 +27,7 @@ public class FinalBoss : MonoBehaviour {
 
     public void Awake()
     {
+        _audio = GetComponent<AudioSource>();
         _agent = GetComponent<NavMeshAgent>();
         _anim = GetComponent<Animation>();
         _target = FindObjectOfType<Hero>().transform;
@@ -57,12 +60,18 @@ public class FinalBoss : MonoBehaviour {
 
             if (_distance <= distanceToAttack)
             {
+                _audio.clip = clips[0];
+                if (!_audio.isPlaying)
+                    _audio.Play();
                 _anim.Play("Hit 1");
                 Quaternion look = Quaternion.LookRotation((_newTarget - _newPos).normalized);
                 this.transform.rotation = Quaternion.Lerp(this.transform.rotation, look, 0.5f);
             }
             else
             {
+                _audio.clip = clips[1];
+                if (!_audio.isPlaying)
+                    _audio.Play();
                 _anim.Play("Walk");
                 _agent.SetDestination(_target.position);
             }
@@ -85,6 +94,7 @@ public class FinalBoss : MonoBehaviour {
             _agent = null;
             _anim.Stop();
             _anim.Play("Death");
+            GameObject.FindGameObjectWithTag("FinalDoor").GetComponent<Animation>().Play("Open");
             this.enabled = false;
             GetComponent<CapsuleCollider>().enabled = false;
         }

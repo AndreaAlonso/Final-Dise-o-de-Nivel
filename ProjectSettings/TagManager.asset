@@ -11,6 +11,7 @@ TagManager:
   - BossFinal
   - Coins
   - Keys
+  - FinalDoor
   layers:
   - Default
   - TransparentFX

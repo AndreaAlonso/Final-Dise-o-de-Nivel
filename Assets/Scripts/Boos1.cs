@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class Boos1 : MonoBehaviour
 {
-
+    AudioSource _audio;
+    public AudioClip[] clips;
     NavMeshAgent _agent;
     Animation _anim;
     Transform _target;
@@ -26,6 +27,7 @@ public class Boos1 : MonoBehaviour
 
     public void Awake()
     {
+        _audio = GetComponent<AudioSource>();
         _agent = GetComponent<NavMeshAgent>();
         _anim = GetComponent<Animation>();
         _target = FindObjectOfType<Hero>().transform;
@@ -58,12 +60,18 @@ public class Boos1 : MonoBehaviour
 
             if (_distance <= distanceToAttack)
             {
+                _audio.clip = clips[0];
+                if (!_audio.isPlaying)
+                    _audio.Play();
                 _anim.Play("attack1");
                 Quaternion look = Quaternion.LookRotation((_newTarget - _newPos).normalized);
                 this.transform.rotation = Quaternion.Lerp(this.transform.rotation, look, 0.5f);
             }
             else
             {
+                _audio.clip = clips[1];
+                if (!_audio.isPlaying)
+                    _audio.Play();
                 _anim.Play("Walk");
                 _agent.SetDestination(_target.position);
             }
@@ -78,6 +86,7 @@ public class Boos1 : MonoBehaviour
     {
         life -= damage;
         slider.value = life;
+        if(text != null)
         text.text = life.ToString();
 
         if (life <= 0)
