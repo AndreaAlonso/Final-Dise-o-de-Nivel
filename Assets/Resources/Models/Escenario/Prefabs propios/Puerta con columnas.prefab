@@ -27,7 +27,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &1498507033307038
 GameObject:
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 23760330880826462}
   - component: {fileID: 65443324742175560}
   - component: {fileID: 208176339218860598}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: door_left
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &1508784660577510
 GameObject:
@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 23335873350602970}
   - component: {fileID: 65073847075024766}
   - component: {fileID: 208005258463373118}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: door_right
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 23597550654595078}
   - component: {fileID: 111842651499762398}
   - component: {fileID: 114202647647175602}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: steel_door_dungeonfit
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &4182486384719394
 Transform:
@@ -152,7 +152,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1007614314790960}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -2.9089293, y: 0.1060002, z: 5.05}
+  m_LocalPosition: {x: -2.9089293, y: 0.1060002, z: 5.022}
   m_LocalScale: {x: 2, y: 2.5, z: 2}
   m_Children: []
   m_Father: {fileID: 4765618260120514}

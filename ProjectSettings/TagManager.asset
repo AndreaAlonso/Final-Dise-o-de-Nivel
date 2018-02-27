@@ -7,6 +7,10 @@ TagManager:
   - Door
   - Chest
   - Enemy1
+  - Boss1
+  - BossFinal
+  - Coins
+  - Keys
   layers:
   - Default
   - TransparentFX

@@ -1993,7 +1993,7 @@ Animation:
   - {fileID: 7400018, guid: ecb212b4ae2ea3b4396cbca070e86160, type: 3}
   - {fileID: 7400020, guid: ecb212b4ae2ea3b4396cbca070e86160, type: 3}
   - {fileID: 7400022, guid: ecb212b4ae2ea3b4396cbca070e86160, type: 3}
-  - {fileID: 7400024, guid: ecb212b4ae2ea3b4396cbca070e86160, type: 3}
+  - {fileID: 7400000, guid: f1ec36ef8ae5e6e45bc7c9ad7562c26a, type: 2}
   - {fileID: 7400026, guid: ecb212b4ae2ea3b4396cbca070e86160, type: 3}
   - {fileID: 7400028, guid: ecb212b4ae2ea3b4396cbca070e86160, type: 3}
   - {fileID: 7400030, guid: ecb212b4ae2ea3b4396cbca070e86160, type: 3}
@@ -2574,6 +2574,7 @@ MonoBehaviour:
   randomMove: 0
   timeToRandomMove: 0
   life: 60
+  attack: 12
   slider: {fileID: 0}
   text: {fileID: 0}
 --- !u!114 &114883891586878318

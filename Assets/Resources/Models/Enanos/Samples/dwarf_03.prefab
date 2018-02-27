@@ -2476,6 +2476,7 @@ MonoBehaviour:
   randomMove: 0
   timeToRandomMove: 0
   life: 60
+  attack: 8
   slider: {fileID: 0}
   text: {fileID: 0}
 --- !u!114 &114966604917117174

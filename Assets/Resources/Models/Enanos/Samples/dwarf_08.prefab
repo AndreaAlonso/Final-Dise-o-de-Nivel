@@ -923,7 +923,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.365013, y: -4.760751, z: -5.884719}
+  m_LocalPosition: {x: -4.195671, y: 4.4923925, z: 3.1604004}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 400004}
@@ -1967,7 +1967,7 @@ Animation:
   - {fileID: 7400018, guid: ecb212b4ae2ea3b4396cbca070e86160, type: 3}
   - {fileID: 7400020, guid: ecb212b4ae2ea3b4396cbca070e86160, type: 3}
   - {fileID: 7400022, guid: ecb212b4ae2ea3b4396cbca070e86160, type: 3}
-  - {fileID: 7400024, guid: ecb212b4ae2ea3b4396cbca070e86160, type: 3}
+  - {fileID: 7400000, guid: f1ec36ef8ae5e6e45bc7c9ad7562c26a, type: 2}
   - {fileID: 7400026, guid: ecb212b4ae2ea3b4396cbca070e86160, type: 3}
   - {fileID: 7400028, guid: ecb212b4ae2ea3b4396cbca070e86160, type: 3}
   - {fileID: 7400030, guid: ecb212b4ae2ea3b4396cbca070e86160, type: 3}
@@ -2491,6 +2491,7 @@ MonoBehaviour:
   randomMove: 0
   timeToRandomMove: 0
   life: 60
+  attack: 12
   slider: {fileID: 0}
   text: {fileID: 0}
 --- !u!136 &136308557223587436
